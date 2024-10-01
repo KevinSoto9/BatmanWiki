@@ -7,6 +7,12 @@ export const NavBar = () => {
 
     const [show, setShow] = useState(false)
 
+    const [imageSrc, setImageSrc] = useState('/src/assets/NavSymbol.png');
+
+    const handleError = () => {
+        setImageSrc('../src/assets/NavSymbol.png');
+    };
+
     return (
     <div className='bg-gradient-to-b from-black to-gray-800 text-white h-[4rem] px-10 pb-10 py-6 w-full fixed top-0 left-0 z-50'>
         <div className='flex justify-between'>
@@ -17,7 +23,12 @@ export const NavBar = () => {
             >
                 <div className='flex items-center gap-4'>
                     <a href='/'><h1 className='text-[1.5rem]'>{'BatmanWiki'}</h1></a>
-                    <img src="src\assets\NavSymbol.png" alt='batman' className='w-[3rem] h-[2rem]'/>
+                    <img 
+                    src={imageSrc} 
+                    alt='batman' 
+                    className='w-[3rem] h-[2rem]' 
+                    onError={handleError}
+                    />
                 </div>
             </motion.div>
 
