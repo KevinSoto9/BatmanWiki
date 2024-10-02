@@ -1,5 +1,6 @@
 import characterImageUrls from "./constants/CharactersImages";
 import Character from "../types/Character";
+import Location from "../types/Location"; // Asegúrate de tener este tipo definido
 
 {/*Have to do this because in the api the id are wrong randomly*/}
 const swapCharacterIds = (characters: Character[]): Character[] => {
@@ -22,7 +23,6 @@ const swapCharacterIds = (characters: Character[]): Character[] => {
     }));
 };
 
-
 const fetchCharacters = async (number: number, page: number) => {
     try {
         const response = await fetch(`https://api.batmanapi.com/v1/characters?pagination[pageSize]=${number}&pagination[page]=${page}`);
@@ -33,7 +33,7 @@ const fetchCharacters = async (number: number, page: number) => {
 
         const data = await response.json();
 
-        return data.data.map((character: { id: string; attributes: { name: string; alias:string; alive: boolean; role : string; description : string; creator: string; first_appearance: string; gender: string; abilities:[]; image_url: string;} }) => ({
+        return data.data.map((character: { id: string; attributes: { name: string; alias:string; alive: boolean; role : string; description : string; creator: string; first_appearance: string; gender: string; abilities:[]; image_url: string; locations: Location[] } }) => ({
             id: character.id,
             name: character.attributes.name,
             alias: character.attributes.alias,
@@ -44,8 +44,8 @@ const fetchCharacters = async (number: number, page: number) => {
             first_appearance: character.attributes.first_appearance,
             gender: character.attributes.gender,
             abilities: character.attributes.abilities,
-            image_url: characterImageUrls[character.id], 
-            
+            image_url: characterImageUrls[character.id],
+            locations: character.attributes.locations
         }));
     } catch (error: unknown) {
         if (error instanceof Error) {
@@ -56,4 +56,4 @@ const fetchCharacters = async (number: number, page: number) => {
     }
 };
 
-export { fetchCharacters, swapCharacterIds};
+export { fetchCharacters, swapCharacterIds };

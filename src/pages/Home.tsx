@@ -1,5 +1,6 @@
 import HomeComics from "../components/subcomponents/HomeComics";
 import HomeCharacters from "../components/subcomponents/HomeCharacter";
+import HomeLocations from "../components/subcomponents/HomeLocations";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             </p>
             <HomeComics />
             <HomeCharacters />
+            <HomeLocations />
         </div>
     );
 };

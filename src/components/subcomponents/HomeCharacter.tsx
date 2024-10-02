@@ -10,9 +10,8 @@ const HomeCharacters = () => {
     useEffect(() => {
         const loadCharacters = async () => {
             const data = await fetchCharacters(3, 1);
-            console.log("Fetched data:", data); // Verifica los datos obtenidos aquí
+            console.log("Fetched data:", data); 
 
-            // Aplica el intercambio de IDs para mostrar los detalles
             const swappedCharacters = swapCharacterIds(data);
             setCharacters(swappedCharacters);
             setLoading(false);
