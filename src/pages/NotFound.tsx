@@ -8,6 +8,8 @@ const NotFound: React.FC = () => {
         setImageSrc('../src/assets/Batman404.jpg');
     };
 
+    window.scrollTo(0, 0);
+    
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white px-2">
             <img 

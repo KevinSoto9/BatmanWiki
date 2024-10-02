@@ -19,7 +19,7 @@ const HomeComics = () => {
 
     return (
         <>
-            <h2 className="text-4xl mb-4 font-bold">Comics</h2>
+            <h2 className="text-4xl mt-10 mb-4 font-bold">Comics</h2>
             <p className="text-center text-md mb-7 text-gray-300 max-w-xl">
                 Explore a wide variety of comics!
             </p>
@@ -45,7 +45,7 @@ const HomeComics = () => {
                     ))}
                 </div>
             )}
-            <Link to="/comics" className="bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-110 mt-10 shadow-md">
+            <Link to="/comics" className="bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-110 mt-10 mb-6 shadow-md">
                 View all comics
             </Link>
         </>

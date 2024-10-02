@@ -18,6 +18,7 @@ const ComicDetails = () => {
                     throw new Error("Comic not found.");
                 }
                 setComic(data[0]);
+                window.scrollTo(0, 0);
             } catch (err) {
                 if (err instanceof Error) {
                     setError(err.message);
@@ -38,7 +39,7 @@ const ComicDetails = () => {
     }, [error, navigate]);
 
     if (loading) {
-        return <div className="text-center text-gray-500">Loading...</div>;
+        return <div className="text-center bg-gray-800 min-h-screen text-white">Loading...</div>;
     }
 
     return (
@@ -49,7 +50,7 @@ const ComicDetails = () => {
                         {comic.name || 'No name available'}
                     </h2>
                     <div className="bg-slate-900 border border-gray-700 rounded-lg p-8 w-full max-w-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 text-white">
-                        <div className="flex flex-col md:flex-row items-start">
+                        <div className="flex flex-col md:flex-row items-center">
                             <img
                                 src={comic.image_url}
                                 alt={comic.name || 'Comic cover'}

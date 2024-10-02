@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer className='bg-gradient-to-b from-gray-800 to-black text-white py-2'>
       <div className='flex flex-col items-center'>
-        <p className='mb-2'>© 2024 BatmanWiki</p>
         <p className='mb-2'>A community dedicated to Batman fans.</p>
         <a 
           href='https://github.com/KevinSoto9/BatmanWiki' 

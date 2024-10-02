@@ -57,7 +57,7 @@ const Comics = () => {
                     {comics.map((comic: Comic) => (
                         <Link to={`/comic/${comic.id}`} key={comic.id} className="no-underline">
                             <div
-                                className="bg-slate-900 border border-gray-700 rounded-lg p-6 w-80 md:w-96 shadow-lg hover:shadow-2xl transition-shadow duration-300 text-white"
+                                className="bg-slate-900 border border-gray-700 h-full rounded-lg p-6 w-80 md:w-96 shadow-lg hover:shadow-2xl transition-shadow duration-300 text-white"
                             >
                                 <h2 className="text-3xl text-center mb-4 font-bold">{comic.name}</h2>
                                 <div className="flex flex-col md:flex-row items-center">

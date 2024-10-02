@@ -1,6 +1,7 @@
 import comicImageUrls from "./constants/ComicsImages";
 import Comic from "../types/Comic";
 
+{/*Have to do this because in the api the id are wrong*/}
 const swapComicIds = (comics: Comic[]): Comic[] => {
     return comics.map(comic => {
         if (parseInt(comic.id) >= 1 && parseInt(comic.id) <= 10) {
@@ -35,7 +36,7 @@ const fetchComics = async (number: number, page: number) => {
             writer: comic.attributes.writer,
             artist: comic.attributes.artist,
             publication_date: comic.attributes.publication_date,
-            image_url: comicImageUrls[comic.id] || 'default_image_url', 
+            image_url: comicImageUrls[comic.id], 
             issues: comic.attributes.issues,
             characters: comic.attributes.characters,
             locations: comic.attributes.locations
