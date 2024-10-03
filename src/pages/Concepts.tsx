@@ -1,4 +1,4 @@
-import { fetchConcepts, swapConceptIds } from "../components/fetchs/FetchConcepts";
+import { fetchConcepts} from "../components/fetchs/FetchConcepts";
 import { useEffect, useState } from "react";
 import Concept from "../components/types/Concept";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ const Concepts = () => {
                 console.log("Fetched data:", data);
 
                 if (Array.isArray(data) && data.length > 0) {
-                    const swappedConcepts = swapConceptIds(data);
+                    const swappedConcepts = data;
                     setConcepts(swappedConcepts);
                 } else {
                     console.log("No concepts found in the response.");
@@ -68,6 +68,8 @@ const Concepts = () => {
                                     />
                                     <div className="flex-grow">
                                         <p className="text-base text-gray-300 mb-3">{concept.description}</p>
+                                        <p className="text-sm text-gray-400"><strong>Type:</strong> {concept.type}</p>
+                                        <p className="text-sm text-gray-400"><strong>First Appearance:</strong> {concept.first_appearance}</p>
                                     </div>
                                 </div>
                             </div>
