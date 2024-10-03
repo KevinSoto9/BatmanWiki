@@ -9,6 +9,7 @@ import Characters from './pages/Characters'
 import CharacterDetails from './pages/IndividualPages/IndividualCharacter'
 import Locations from './pages/Locations'
 import LocationDetails from './pages/IndividualPages/IndividualLocation'
+import Concepts from './pages/Concepts'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Character/:number" element={<CharacterDetails/>} />
           <Route path="/Locations" element={<Locations />} />
           <Route path='/Location/:number' element={<LocationDetails />} />
+          <Route path="/Concepts" element={<Concepts />} />
           <Route path="*" element={<NotFound />} /> 
         </Routes>
       </Layout>

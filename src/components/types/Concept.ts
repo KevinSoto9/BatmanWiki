@@ -1,5 +1,5 @@
 interface Concept {
-    id: number;
+    id: string;
     name: string;
     description: string;
     related_characters: [];
@@ -7,6 +7,7 @@ interface Concept {
     first_appearance: string;
     creator: string;
     type: string;
+    image_url: string;
     }
 
 export default Concept;
