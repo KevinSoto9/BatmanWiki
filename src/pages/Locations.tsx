@@ -1,4 +1,4 @@
-import { fetchLocations, swapLocationIds } from "../components/fetchs/FetchLocations";
+import { fetchLocations } from "../components/fetchs/FetchLocations";
 import { useEffect, useState } from "react";
 import Location from "../components/types/Location";
 import { Link } from "react-router-dom";
@@ -17,8 +17,8 @@ const Locations = () => {
                 console.log("Fetched data:", data);
 
                 if (Array.isArray(data) && data.length > 0) {
-                    const swappedLocations = swapLocationIds(data);
-                    setLocations(swappedLocations);
+                    console.log("Data before swapping IDs:", data);
+                    setLocations(data);
                 } else {
                     console.log("No locations found in the response.");
                     setLocations([]);

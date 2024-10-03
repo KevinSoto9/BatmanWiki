@@ -64,6 +64,10 @@ const LocationDetails = () => {
                         </div>
                         <div className="mt-6">
                             <h3 className="text-2xl font-semibold mb-2">Details</h3>
+                            <p className="text-lg text-gray-400 mb-2"><strong>Notable events:</strong> {location.notable_events?.length ? location.notable_events.join(', ') : 'No notable events available'}</p>
+                            <p className="text-lg text-gray-400 mb-2"><strong>Related Characters:</strong> {location.related_characters?.length ? location.related_characters.join(', ') : 'No coordinates available'}</p>
+                            <p className="text-lg text-gray-400 mb-2"><strong>Coordinates:</strong> {location.latitude} , {location.longitude}</p>
+                            <p className="text-lg text-gray-400 mb-2"><strong>Creator:</strong> {location.creator || 'No creator available'}</p>
                         </div>
                     </div>
                 </>
