@@ -63,7 +63,7 @@ export const NavBarLi = () => {
         transition={{ delay: 0.6, duration: 2 }}
         className='my-4 border-b-2 min-[1500px]:border-b-0 min-[1500px]:my-0'
       >
-        <a className='text-[1.4rem] px-6 min-[1500px]:hover:border-b-2' href="#">Games</a>
+        <a className='text-[1.4rem] px-6 min-[1500px]:hover:border-b-2' href="/Games">Games</a>
       </motion.div>
     </ul>
   );

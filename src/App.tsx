@@ -13,6 +13,8 @@ import Concepts from './pages/Concepts'
 import ConceptDetails from './pages/IndividualPages/IndividualConcept'
 import Movies from './pages/Movies'
 import MovieDetails from './pages/IndividualPages/IndivudualMovie'
+import Games from './pages/Games'
+import GameDetails from './pages/IndividualPages/IndividualGame'
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/Concept/:number" element={<ConceptDetails />} />
           <Route path="/Movies" element={<Movies />} />
           <Route path="/Movie/:id" element={<MovieDetails />} />
+          <Route path="/Games" element={<Games />} />
+          <Route path="/Game/:id" element={<GameDetails />} />
           <Route path="*" element={<NotFound />} /> 
         </Routes>
       </Layout>

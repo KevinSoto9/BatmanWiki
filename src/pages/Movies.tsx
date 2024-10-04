@@ -59,7 +59,7 @@ const Movies = () => {
                                     src={movie.Poster} 
                                     alt={movie.Title} 
                                     className="w-48 h-72 rounded-lg mb-4 shadow-md" 
-                                    onError={(e) => { e.currentTarget.src = "/path/to/fallback-image.jpg"; }} 
+                                    onError={(e) => { e.currentTarget.src = "../src/assets/image-not-available.jpg"; }} 
                                 />
                                 <p className="text-lg text-gray-300 mb-1"><strong>Year:</strong> {movie.Year}</p>
                             </div>

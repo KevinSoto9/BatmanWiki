@@ -3,6 +3,7 @@ import HomeCharacters from "../components/subcomponents/HomeCharacter";
 import HomeLocations from "../components/subcomponents/HomeLocations";
 import HomeConcepts from "../components/subcomponents/HomeConcepts";
 import HomeMovies from "../components/subcomponents/HomeMovies";
+import HomeGames from "../components/subcomponents/HomeGames";
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <HomeLocations />
             <HomeConcepts />
             <HomeMovies />
+            <HomeGames />
         </div>
     );
 };

@@ -20,6 +20,10 @@ const HomeMovies = () => {
         loadMovies();
     }, []);
 
+    if (loading) {
+        return <div className="text-center bg-gray-800 min-h-screen text-white">Loading...</div>;
+    }
+
     return (
         <>
             <h2 className="text-4xl mt-10 mb-4 font-bold">Movies</h2>

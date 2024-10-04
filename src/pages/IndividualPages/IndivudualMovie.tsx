@@ -14,6 +14,7 @@ const MovieDetails = () => {
             try {
                 const data = await fetchMovie(String(id));
                 console.log("Fetched data:", data);
+                window.scrollTo(0, 0);
 
                 if (data && data.movie) {
                     setMovie(data.movie);
@@ -32,6 +33,10 @@ const MovieDetails = () => {
         loadMovie();
     }, [id]);
 
+    if (loading) {
+        return <div className="text-center bg-gray-800 min-h-screen text-white">Loading...</div>;
+    }
+
     return (
         <div className="flex flex-col items-center min-h-screen w-full bg-gray-800 p-6">
             {movie ? (
@@ -45,7 +50,7 @@ const MovieDetails = () => {
                                 src={movie.Poster}
                                 alt={movie.Title || 'Movie poster'}
                                 className="w-64 h-96 rounded-lg mb-4 md:mb-0 md:mr-6 shadow-md"
-                                onError={(e) => { e.currentTarget.src = "/path/to/fallback-image.jpg"; }}
+                                onError={(e) => { e.currentTarget.src = "../src/assets/image-not-available.jpg"; }}
                             />
                             <div className="flex-grow">
                                 <p className="text-xl text-gray-300 mb-4">{movie.Plot || 'No plot available'}</p>
