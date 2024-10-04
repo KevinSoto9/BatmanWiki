@@ -2,6 +2,7 @@ import HomeComics from "../components/subcomponents/HomeComics";
 import HomeCharacters from "../components/subcomponents/HomeCharacter";
 import HomeLocations from "../components/subcomponents/HomeLocations";
 import HomeConcepts from "../components/subcomponents/HomeConcepts";
+import HomeMovies from "../components/subcomponents/HomeMovies";
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <HomeCharacters />
             <HomeLocations />
             <HomeConcepts />
+            <HomeMovies />
         </div>
     );
 };

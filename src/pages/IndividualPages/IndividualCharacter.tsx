@@ -69,7 +69,7 @@ const CharacterDetails = () => {
                         </div>
                         <div className="mt-6">
                             <h3 className="text-2xl font-semibold mb-2">Details</h3>
-                            <p className="text-lg text-gray-400 mb-2"><strong>Alive:</strong> {(character.alive ? 'Yes' : 'No' ) || 'No creator available'}</p>
+                            <p className="text-lg text-gray-400 mb-2"><strong>Alive:</strong> {character.alive ? 'Yes' : 'No'}</p>
                             <p className="text-lg text-gray-400 mb-2"><strong>Role:</strong> {character.role || 'No creator available'}</p>
                             <p className="text-lg text-gray-400 mb-2"><strong>Gender:</strong> {character.gender || 'No creator available'}</p>
                             <p className="text-lg text-gray-400 mb-2"><strong>Abilities:</strong> {character.abilities?.length ? character.abilities.join(', ') : 'No abilities available'}</p>

@@ -1,6 +1,5 @@
 import characterImageUrls from "./constants/CharactersImages";
 import Character from "../types/Character";
-import Location from "../types/Location"; // Asegúrate de tener este tipo definido
 
 {/*Have to do this because in the api the id are wrong randomly*/}
 const swapCharacterIds = (characters: Character[]): Character[] => {

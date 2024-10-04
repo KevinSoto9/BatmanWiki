@@ -11,6 +11,8 @@ import Locations from './pages/Locations'
 import LocationDetails from './pages/IndividualPages/IndividualLocation'
 import Concepts from './pages/Concepts'
 import ConceptDetails from './pages/IndividualPages/IndividualConcept'
+import Movies from './pages/Movies'
+import MovieDetails from './pages/IndividualPages/IndivudualMovie'
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path='/Location/:number' element={<LocationDetails />} />
           <Route path="/Concepts" element={<Concepts />} />
           <Route path="/Concept/:number" element={<ConceptDetails />} />
+          <Route path="/Movies" element={<Movies />} />
+          <Route path="/Movie/:id" element={<MovieDetails />} />
           <Route path="*" element={<NotFound />} /> 
         </Routes>
       </Layout>
