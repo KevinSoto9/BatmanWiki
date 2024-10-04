@@ -8,7 +8,7 @@ export const NavBar = () => {
     const [imageSrc, setImageSrc] = useState('/src/assets/NavSymbol.png');
 
     const handleError = () => {
-        setImageSrc('../src/assets/NavSymbol.png');
+        setImageSrc('https://i.pinimg.com/originals/91/53/93/9153939d7544582c1fd8c692b626958d.png');
     };
 
     return (
