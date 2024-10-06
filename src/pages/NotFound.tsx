@@ -5,7 +5,7 @@ const NotFound: React.FC = () => {
     const [imageSrc, setImageSrc] = useState('src/assets/Batman404.jpg');
 
     const handleError = () => {
-        setImageSrc('../src/assets/Batman404.jpg');
+        setImageSrc('https://www.zonanegativa.com/imagenes/2018/03/Batman-Principe-Oscuro-1-01.jpg');
     };
 
     window.scrollTo(0, 0);
