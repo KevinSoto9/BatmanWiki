@@ -31,6 +31,23 @@ BatmanWiki es una aplicación web interactiva para explorar el universo de Batma
 - **Framer Motion** – Animaciones fluidas  
 - **Tailwind CSS** – Estilizado rápido y responsivo  
 
+## 📡 APIs y Recursos
+
+### APIs Utilizadas
+- **[Batman API](https://batmanapi.com/)** - API principal para obtener información sobre personajes, villanos y eventos del universo Batman
+- **[OMDb API](https://www.omdbapi.com/)** - API para obtener información sobre películas y series de Batman
+- **[Superhero API](https://superheroapi.com/)** - API complementaria para datos adicionales de superhéroes
+
+### Recursos y Assets
+- **[DC Comics](https://www.dccomics.com/)** - Referencia oficial para información del universo DC
+- **[Batman Wiki](https://batman.fandom.com/)** - Wiki no oficial con información detallada
+- **[Comic Vine](https://comicvine.gamespot.com/)** - Base de datos de cómics y personajes
+
+### Créditos de Imágenes
+- Imágenes de personajes: DC Comics
+- Fondos y elementos de UI: Diseño personalizado
+- Íconos: React Icons y Font Awesome
+
 ---
 
 ## 📋 Requisitos del Sistema
